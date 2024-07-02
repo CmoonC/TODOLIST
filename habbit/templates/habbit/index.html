@@ -1,0 +1,22 @@
+{% extends "habbit/layout.html"%}
+
+{% block body %}
+    <h1> Hi there, how are you? There is your`s TODO LIST</h1>
+        <div>
+            <ul>
+                {% for task in list_of_tasks %}
+                    <li> {{task.name}} </li>
+                    <ul>
+                        <li> {{ task.description}} </li>
+                    </ul>
+                    <div id="buttons">
+                        <a href="{% url 'tasks:editing' task.id  %}" >Edit</a>
+                        <a href = "{% url 'tasks:deleting' task.id %}">DELETE?!</a>
+                    </div>
+                {% empty %}
+                    <li>You have no tasks for now :)</li>
+                {% endfor %}
+            </ul>
+            <a href="{% url 'tasks:add_task' %}"> Add a New Task !</a>
+        </div>
+{% endblock %}

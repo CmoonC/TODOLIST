@@ -1,0 +1,16 @@
+h1 {
+    font-family: sans-serif;
+    font-size: 30px;
+}
+h2 {
+    font-size: 5px;
+    font-color: "red";
+}
+li {
+    font-size: 20px;
+    font-color:'red';
+}
+
+#buttons {
+    margin-left:80px;
+}
